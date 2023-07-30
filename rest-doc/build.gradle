@@ -1,3 +1,5 @@
+//build.gradle 설정 정보 순서도 고려
+
 plugins {
     id 'java'
     id 'org.springframework.boot' version '3.1.2'
@@ -24,7 +26,7 @@ dependencies {
 }
 
 ext {
-    snippetsDir = file('build/generated-snippets')
+    snippetsDir = file('build/generated-snippets') //테스트 진행 시 해당 경로에 스니펫 생성
 }
 
 test {
@@ -40,7 +42,7 @@ asciidoctor {
 
 bootJar {
     dependsOn asciidoctor
-    from ("${asciidoctor.outputDir}") {
+    from ("${asciidoctor.outputDir}") { //생성된 문서를 jar의 static/docs 경로로 복사
         into 'static/docs'
     }
 }
