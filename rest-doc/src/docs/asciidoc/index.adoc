@@ -1,0 +1,3 @@
+include::{snippets}/index/http-request.adoc[]
+
+operation::index[snippets='curl-request,http-request,https-response,httpie-request,request-body,response-body']
