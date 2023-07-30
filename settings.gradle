@@ -2,4 +2,6 @@ rootProject.name = 'spring'
 include 'restdoc'
 include 'rest-doc-boot'
 include 'rest-doc'
+include 'swagger'
+include 'swagger'
 
